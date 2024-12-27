@@ -1,0 +1,22 @@
+# docker-compose.override.yml
+services:
+  webapp:
+    environment:
+      - NODE_ENV=development
+    command: npm run dev
+    volumes:
+      - ./webapp:/app
+      - webapp_node_modules:/app/node_modules
+
+  server:
+    environment:
+      - NODE_ENV=development
+      - LOG_LEVEL=debug
+    command: npm run dev
+    volumes:
+      - ./server:/app
+      - server_node_modules:/app/node_modules
+
+volumes:
+  webapp_node_modules:
+  server_node_modules:

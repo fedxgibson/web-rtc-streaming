@@ -1,0 +1,9 @@
+.git
+.gitignore
+README.md
+.env
+.env.*
+*.spec.js
+__tests__
+tests
+jest.config.js
